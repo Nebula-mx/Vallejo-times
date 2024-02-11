@@ -39,18 +39,20 @@
             top: 0;
             z-index: 10;
             filter: invert(100%);
+            backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
             animation: changeNavColors both linear;
             animation-timeline: scroll(root block);
             animation-range: 0 130px;
         }
-        @keyframes changeNavColors {
+        @supports (animation-timeline: scroll()){
+            @keyframes changeNavColors {
             to{
                 filter: invert(0);
                 position: fixed;
                 padding: 0.5em;
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
             }
+        }
         }
         nav legend {
             font-size: clamp(0px, 5vw, 24px);
