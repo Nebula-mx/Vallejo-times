@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: ArchivoBlack;
+            src: url(./src/assets/fonts/ArchivoBlack-Regular.ttf);
+        }
+        :root{
+            all: unset;
+            box-sizing: border-box;
+        }
+        #root {
+            background: rgb(226,226,226);
+            background: linear-gradient(225deg, rgba(226,226,226,1) 0%, rgba(255,255,255,1) 100%); 
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            height: 100dvh;
+            overflow-x: hidden;
+            margin: 0;
+            font-family: "ArchivoBlack";
+            color: #000;
+        }
+        main article > p {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        nav {
+            display: flex;
+            position: sticky;
+            width: 100vw;
+            padding: 1em 0;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid #bdbdbd;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        nav legend {
+            font-size: clamp(0px, 5vw, 24px);
+            cursor: pointer;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            width: 20%;
+            justify-content: space-between;
+            color: #575757;
+            font-size: clamp(0px, 5vw, 18px);
+        }
+        nav ul li {
+            cursor: pointer;
+            transition: color 0.15s;
+            margin: 0 clamp(5px, 2vw, 60px);
+        }
+        nav ul li:hover {
+            color: #000;
+            text-decoration: underline;
+        }
+        main {
+            width: 60%;
+            max-width: 824px;
+            margin: 0 auto;
+        }
+        main h1 {
+            font-size: clamp(0px, 10vw, 32px);
+        }
+        main .articleCard {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            border-radius: clamp(1px, 5vw, 10px);
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.15s;
+            text-align: inherit;
+            font-family: "ArchivoBlack";
+        }
+        main .articleCard:hover {
+            background-color: #f0f0f0b8;
+            transform: translateY(-2px);
+        }
+        main .articleCard:active {
+            background-color: #e0e0e0b8;
+            transform: translateY(2px);
+        }
+        main .articleCard img {
+            width: 60%;
+            height: 60%;
+            border-radius: clamp(1px, 5vw, 10px);
+            margin: 0 auto;
+        }
+        main .articleCard .cardTitle {
+            margin-top: 0.5em;
+            font-size: clamp(0px, 10vw, 24px);
+            color: #000;
+        }
+        main .articleCard .articleDesc {
+            font-size: clamp(0px, 10vw, 18px);
+            opacity: 80%;
+            color: #000;
+        }
+    </style>
+    <title>Vallejo times</title>
+</head>
+<body id="root">
+    <nav>
+        <legend data-mode="goToArticle" data-article="indexView">Vallejo Times</legend>
+        <ul>
+            <li data-mode="goToArticle" data-article="indexView">Inicio</li>
+            <li data-mode="goToArticle" data-article="indexView">Articulos</li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Nuestros mas recientes articulos: </h1>
+        <button class="articleCard" data-mode="goToArticle" data-article="que-son-las-tic">
+            <img src="./src/assets/images/ticImage.jpg" alt="" srcset="" data-mode="goToArticle" data-article="que-son-las-tic">
+            <legend class="cardTitle" data-mode="goToArticle" data-article="que-son-las-tic">¿Qué son las TIC y para que nos sirven?</legend>
+            <legend class="articleDesc" data-mode="goToArticle" data-article="que-son-las-tic">Escrito el : 07/02/24</legend>
+        </button>
+    </main>
+    <footer></footer>
+    <script type="module" src="./src/js/index.js"></script>
+</body>
+</html>
