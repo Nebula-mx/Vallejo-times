@@ -54,7 +54,7 @@ export default () => {
                 <p>En relación con la facilidad que ha tenido el compartir información, tambien han sido bastante importantes para la creación de movimientos sociales que apollan una causa en específico, haciendo públicas las carencias o deficiencias en ciertos elementos de la sociedad, como la pobreza, corrupción, etc...</p>
                 <p>Sin embargo, tambien han creado un nuevo riesgo como lo son las Fake News y han puesto en juicio que es lo que se considera verdad y lo que no es, haciendo que sea posible realizar manipulación en las redes con el fin de alcanzar un objetivo político.</p>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/3S26oRcoRIs?si=1hmN86kJd5nNO_H9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" style="height: clamp(200px, 40vw, 520px);" src="https://www.youtube.com/embed/3S26oRcoRIs?si=1hmN86kJd5nNO_H9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <legend>Spot político de Andrés Manuel López Obrador</legend>
 
                 <h2>Revolución en el entretenimiento</h2>

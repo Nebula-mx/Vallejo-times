@@ -33,13 +33,24 @@
             width: 100vw;
             padding: 1em 0;
             align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.6);
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.82);
             border: 1px solid #bdbdbd;
             top: 0;
             z-index: 10;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            filter: invert(100%);
+            animation: changeNavColors both linear;
+            animation-timeline: scroll(root block);
+            animation-range: 0 130px;
+        }
+        @keyframes changeNavColors {
+            to{
+                filter: invert(0);
+                position: fixed;
+                padding: 0.5em;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+            }
         }
         nav legend {
             font-size: clamp(0px, 5vw, 24px);
@@ -51,7 +62,7 @@
             padding: 0;
             margin: 10px 0;
             width: 20%;
-            justify-content: space-between;
+            justify-content: end;
             color: #575757;
             font-size: clamp(0px, 5vw, 18px);
         }
@@ -116,7 +127,6 @@
         <legend data-mode="goToArticle" data-article="indexView">Vallejo Times</legend>
         <ul>
             <li data-mode="goToArticle" data-article="indexView">Inicio</li>
-            <li data-mode="goToArticle" data-article="indexView">Articulos</li>
         </ul>
     </nav>
     <main>
