@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        @font-face {
-            font-family: ArchivoBlack;
-            src: url(./src/assets/fonts/ArchivoBlack-Regular.ttf);
-        }
         :root{
             all: unset;
             box-sizing: border-box;
@@ -21,7 +17,7 @@
             height: 100dvh;
             overflow-x: hidden;
             margin: 0;
-            font-family: "ArchivoBlack";
+            font-family: 'Times New Roman', Times, serif;
             color: #000;
         }
         main article > p {
@@ -29,7 +25,7 @@
         }
         nav {
             display: flex;
-            position: sticky;
+            position: fixed;
             width: 100vw;
             padding: 1em 0;
             align-items: center;
@@ -49,8 +45,8 @@
             @keyframes changeNavColors {
             to{
                 filter: invert(0);
-                position: fixed;
                 padding: 0.5em;
+                font-weight: 600;
             }
         }
         }
@@ -81,6 +77,7 @@
             width: 60%;
             max-width: 824px;
             margin: 0 auto;
+            margin-top: 75px;
         }
         main h1 {
             font-size: clamp(0px, 10vw, 32px);
@@ -95,7 +92,7 @@
             cursor: pointer;
             transition: background-color 0.15s, transform 0.15s;
             text-align: inherit;
-            font-family: "ArchivoBlack";
+            font-family: 'Times New Roman', Times, serif;
         }
         main .articleCard:hover {
             background-color: #f0f0f0b8;
